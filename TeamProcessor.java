@@ -11,11 +11,17 @@ public class TeamProcessor {
     public void processMatchPoints(Team a, Team b, int goalA, int goalB) {
         if (goalA > goalB) {
             a.matchPoints += WIN;
+            a.win++;
+            b.loss++;
         } else if (goalA == goalB) {
             a.matchPoints += DRAW;
             b.matchPoints += DRAW;
+            a.draw++;
+            b.draw++;
         } else {
             b.matchPoints += WIN;
+            a.loss++;
+            b.win++;
         }
     }
 
