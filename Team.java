@@ -25,8 +25,8 @@ public class Team {
         this.registrationDate = registrationDate;
     }
 
-    public void addGoal() {
-        this.totalGoals++;
+    public void addGoal(int goals) {
+        this.totalGoals += goals;
     }
 
     public void addMatchPoints(int matchPoints) {
