@@ -125,4 +125,15 @@ public class TeamProcessor {
         processAltMatchPoints(a, b, goalA, goalB);
         processMatchResult(a, b, goalA, goalB);
     }
+
+    public void clearTeamInformation() {
+        this.teamMap.clear();
+    }
+
+    public void clearMatchResults() {
+        for (String name : this.teamMap.keySet()) {
+            Team team = this.teamMap.get(name);
+            team.clear();
+        }
+    }
 }

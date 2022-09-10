@@ -90,4 +90,13 @@ public class Team {
     public String toString() {
         return this.name;
     }
+
+    public void clear() {
+        this.matchPoints = 0;
+        this.alternativeMatchPoints = 0;
+        this.totalGoals = 0;
+        this.win = 0;
+        this.draw = 0;
+        this.loss = 0;
+    }
 }
