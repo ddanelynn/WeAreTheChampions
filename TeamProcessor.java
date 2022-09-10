@@ -83,25 +83,25 @@ public class TeamProcessor {
     public void processMatchPoints(Team a, Team b, int goalA, int goalB) {
         if (goalA > goalB) {
             a.addMatchPoints(WIN);
-            b.addAltMatchPoints(LOSS);
+            b.addMatchPoints(LOSS);
         } else if (goalA == goalB) {
             a.addMatchPoints(DRAW);
-            b.addAltMatchPoints(DRAW);
+            b.addMatchPoints(DRAW);
         } else {
             a.addMatchPoints(LOSS);
-            b.addAltMatchPoints(WIN);
+            b.addMatchPoints(WIN);
         }
     }
 
     public void processAltMatchPoints(Team a, Team b, int goalA, int goalB) {
         if (goalA > goalB) {
-            a.addMatchPoints(ALT_WIN);
+            a.addAltMatchPoints(ALT_WIN);
             b.addAltMatchPoints(ALT_LOSS);
         } else if (goalA == goalB) {
-            a.addMatchPoints(ALT_DRAW);
+            a.addAltMatchPoints(ALT_DRAW);
             b.addAltMatchPoints(ALT_DRAW);
         } else {
-            a.addMatchPoints(ALT_LOSS);
+            a.addAltMatchPoints(ALT_LOSS);
             b.addAltMatchPoints(ALT_WIN);
         }
     }
