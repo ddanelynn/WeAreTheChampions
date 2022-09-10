@@ -5,21 +5,79 @@ public class Team {
     int DRAW = 1;
     int LOSS = 0;
 
-    String name;
-    int matchPoints;
-    int totalGoals;
-    int win;
-    int draw;
-    int loss;
-    Date registrationDate;
+    private String name;
+    private int matchPoints;
+    private int alternativeMatchPoints;
+    private int totalGoals;
+    private int win;
+    private int draw;
+    private int loss;
+    private Date registrationDate;
 
     public Team(String name, Date registrationDate) {
         this.name = name;
         this.matchPoints = 0;
+        this.alternativeMatchPoints = 0;
         this.totalGoals = 0;
         this.win = 0;
         this.draw = 0;
         this.loss = 0;
         this.registrationDate = registrationDate;
+    }
+
+    public void addGoal() {
+        this.totalGoals++;
+    }
+
+    public void addMatchPoints(int matchPoints) {
+        this.matchPoints += matchPoints;
+    }
+
+    public void addWin() {
+        this.win++;
+    }
+
+    public void addDraw() {
+        this.draw++;
+    }
+
+    public void addLoss() {
+        this.loss++;
+    }
+
+    public void addAltMatchPoints(int matchPoints) {
+        this.alternativeMatchPoints += matchPoints;
+    }
+
+    public int getTotalGoal() {
+        return this.totalGoals;
+    }
+
+    public int getMatchPoints() {
+        return this.matchPoints;
+    }
+
+    public int getWin() {
+        return this.win;
+    }
+
+    public int getDraw() {
+        return this.draw;
+    }
+
+    public int getLoss() {
+        return this.loss;
+    }
+
+    public int getAltMatchPoints() {
+        return this.alternativeMatchPoints;
+    }
+
+    public String getName() {
+        return this.name;
+    }
+
+    public Date getRegistrationDate() {
+        return this.registrationDate;
     }
 }
