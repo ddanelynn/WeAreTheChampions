@@ -13,8 +13,9 @@ public class Team {
     private int draw;
     private int loss;
     private Date registrationDate;
+    private Group group;
 
-    public Team(String name, Date registrationDate) {
+    public Team(String name, Date registrationDate, Group group) {
         this.name = name;
         this.matchPoints = 0;
         this.alternativeMatchPoints = 0;
@@ -23,6 +24,7 @@ public class Team {
         this.draw = 0;
         this.loss = 0;
         this.registrationDate = registrationDate;
+        this.group = group;
     }
 
     public void addGoal(int goals) {
@@ -79,5 +81,9 @@ public class Team {
 
     public Date getRegistrationDate() {
         return this.registrationDate;
+    }
+
+    public Group getGroup() {
+        return this.group;
     }
 }
