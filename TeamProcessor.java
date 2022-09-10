@@ -69,7 +69,7 @@ public class TeamProcessor {
 
         System.out.println("Group 2 Ranking");
 
-        while (!group1Queue.isEmpty()) {
+        while (!group2Queue.isEmpty()) {
             System.out.println(group2Rank + " " + group2Queue.poll());
             group2Rank++;
         }
