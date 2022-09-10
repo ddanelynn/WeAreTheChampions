@@ -86,4 +86,8 @@ public class Team {
     public Group getGroup() {
         return this.group;
     }
+
+    public String toString() {
+        return this.name;
+    }
 }
